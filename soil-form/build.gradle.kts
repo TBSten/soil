@@ -36,6 +36,10 @@ kotlin {
         }
     }
 
+    js {
+        browser()
+    }
+
     sourceSets {
         commonMain.dependencies {
             implementation(compose.runtime)
@@ -96,6 +100,14 @@ kotlin {
         }
 
         wasmJsTest {
+            dependsOn(skikoTest)
+        }
+
+        jsMain {
+            dependsOn(skikoMain)
+        }
+
+        jsTest {
             dependsOn(skikoTest)
         }
     }

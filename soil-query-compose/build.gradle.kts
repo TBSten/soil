@@ -47,6 +47,10 @@ kotlin {
         }
     }
 
+    js {
+        browser()
+    }
+
     sourceSets {
         commonMain.dependencies {
             api(projects.soilQueryCore)
@@ -91,6 +95,10 @@ kotlin {
         }
 
         wasmJsTest {
+            dependsOn(skikoTest)
+        }
+
+        jsTest {
             dependsOn(skikoTest)
         }
     }

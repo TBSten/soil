@@ -32,6 +32,10 @@ kotlin {
         browser()
     }
 
+    js {
+        browser()
+    }
+
     sourceSets {
         all {
             languageSettings {
@@ -63,6 +67,10 @@ kotlin {
         }
 
         wasmJsMain {
+            dependsOn(skikoMain)
+        }
+
+        jsMain {
             dependsOn(skikoMain)
         }
     }

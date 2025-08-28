@@ -32,6 +32,10 @@ kotlin {
         binaries.executable()
     }
 
+    js {
+        browser()
+    }
+
     androidTarget {
         compilerOptions {
             jvmTarget.set(JvmTarget.JVM_11)
@@ -112,6 +116,10 @@ kotlin {
         }
 
         wasmJsMain {
+            dependsOn(skikoMain)
+        }
+
+        jsMain {
             dependsOn(skikoMain)
         }
     }

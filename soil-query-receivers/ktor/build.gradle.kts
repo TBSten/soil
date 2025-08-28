@@ -29,6 +29,10 @@ kotlin {
         browser()
     }
 
+    js {
+        browser()
+    }
+
     sourceSets {
         commonMain.dependencies {
             implementation(projects.soilQueryCore)

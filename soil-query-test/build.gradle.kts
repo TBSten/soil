@@ -29,6 +29,10 @@ kotlin {
         browser()
     }
 
+    js {
+        browser()
+    }
+
     sourceSets {
         commonMain.dependencies {
             api(libs.kotlinx.coroutines.core)

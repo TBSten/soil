@@ -30,6 +30,10 @@ kotlin {
         browser()
     }
 
+    js {
+        browser()
+    }
+
     sourceSets {
         commonMain.dependencies {
             api(libs.kotlinx.serialization.core)
